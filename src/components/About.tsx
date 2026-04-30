@@ -1,88 +1,103 @@
-const stats = [
-  { value: "2+", label: "Years Learning", sub: "Software Engineering" },
-  { value: "2", label: "Internships", sub: "React & Next.js" },
-  { value: "3", label: "Projects", sub: "Capstone & personal" },
-  { value: "3.2", label: "GPA", sub: "Swinburne University" },
+import { CheckCircle2, Globe2, MapPin, Sparkles, Target } from "lucide-react";
+
+const stack = ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Python", "REST APIs", "Node.js", "Figma"];
+
+const strengths = [
+  "Translate Figma designs into responsive, accessible React interfaces.",
+  "Connect frontend screens to REST APIs and dynamic product data.",
+  "Work comfortably with GitHub, backend developers, and client-facing feedback.",
+  "Bring English and Vietnamese communication to multicultural teams.",
 ];
 
-const tags = ["React.js", "Next.js", "TypeScript", "Tailwind CSS", "Python", "ML APIs", "REST APIs", "Node.js"];
+const profileDetails = [
+  { label: "Based in", value: "Fairfield, NSW", Icon: MapPin },
+  { label: "Direction", value: "Frontend + AI", Icon: Target },
+  { label: "Languages", value: "English, Vietnamese", Icon: Globe2 },
+];
 
 export default function About() {
   return (
     <section id="about" className="section-shell">
       <div className="section-inner">
-
-        {/* Header */}
         <div className="section-header">
-          <p className="text-indigo-400 text-xs font-semibold tracking-[0.2em] uppercase mb-3">About Me</p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Turning ideas into{" "}
-            <span className="gradient-text">experiences</span>
-          </h2>
+          <p className="eyebrow">About me</p>
+          <h2 className="section-title">A clean interface builder with an AI learning path.</h2>
+          <p className="section-copy">
+            I care about frontend work that feels calm, responsive, and intentional, the kind of UI that makes a product feel
+            more trustworthy the longer someone uses it.
+          </p>
         </div>
 
-        {/* Two-col layout */}
-        <div className="grid lg:grid-cols-5 gap-8 lg:gap-14 items-start">
-
-          {/* Left — bio (3 cols) */}
-          <div className="lg:col-span-3 space-y-5">
-            <p className="text-slate-400 leading-relaxed text-sm sm:text-base">
-              I&apos;m a Software Engineer from <span className="text-slate-200">Sydney, Australia</span>, focused on building
-              clean, fast, and user-friendly frontend applications. I recently completed my{" "}
-              <span className="text-white font-medium">Bachelor of Software Engineering at Swinburne University</span> (GPA 3.2)
-              and am currently pursuing a{" "}
-              <span className="text-white font-medium">Master&apos;s in Artificial Intelligence at Macquarie University</span>.
-            </p>
-            <p className="text-slate-400 leading-relaxed text-sm sm:text-base">
-              Through internships at <span className="text-indigo-300">Navaro Product</span> and{" "}
-              <span className="text-violet-300">Cloak Solutions</span>, I&apos;ve worked on real products — building UI
-              components from Figma specs, integrating REST APIs, working with ML APIs, and collaborating
-              in cross-functional teams using Git/GitHub.
-            </p>
-            <p className="text-slate-400 leading-relaxed text-sm sm:text-base">
-              I&apos;m driven by curiosity and love working at the intersection of design and engineering.
-              Bilingual in <span className="text-slate-200">English</span> and{" "}
-              <span className="text-slate-200">Vietnamese</span>, I thrive in multicultural team environments.
-            </p>
-
-            {/* Tags */}
-            <div className="pt-2 flex flex-wrap gap-2">
-              {tags.map((t) => (
-                <span key={t} className="pill">{t}</span>
-              ))}
-            </div>
-          </div>
-
-          {/* Right — stat cards (2 cols) */}
-          <div className="lg:col-span-2 grid grid-cols-2 gap-3 sm:gap-4">
-            {stats.map((s) => (
-              <div key={s.label} className="card-border rounded-2xl p-5 sm:p-6 text-center">
-                <div
-                  className="text-3xl sm:text-4xl font-bold mb-1 gradient-text"
-                >
-                  {s.value}
-                </div>
-                <div className="text-white text-xs sm:text-sm font-semibold mb-0.5">{s.label}</div>
-                <div className="text-slate-600 text-[11px] sm:text-xs leading-tight">{s.sub}</div>
-              </div>
-            ))}
-
-            {/* Location card */}
-            <div className="col-span-2 card-border rounded-2xl p-4 sm:p-5 flex items-center gap-4">
-              <div className="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center shrink-0">
-                <svg className="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
-                </svg>
+        <div className="grid gap-6 lg:grid-cols-[0.85fr_1.15fr]">
+          <aside className="glass-card hover-lift p-6">
+            <div className="flex items-center gap-5">
+              <div className="flex h-24 w-24 shrink-0 items-center justify-center rounded-[28px] bg-gradient-to-br from-[#f05f98] via-[#ff8f70] to-[#ffb35c] text-3xl font-black text-white shadow-xl shadow-rose-300/40">
+                JT
               </div>
               <div>
-                <p className="text-white text-sm font-medium">Fairfield, NSW</p>
-                <p className="text-slate-500 text-xs">Sydney, Australia · Open to remote</p>
+                <p className="text-sm font-black uppercase text-[#d94f83]">Joseph Tran</p>
+                <p className="mt-2 text-xl font-black leading-tight text-[#24121b]">Software Engineering graduate</p>
               </div>
+            </div>
+
+            <div className="mt-7 grid gap-3">
+              {profileDetails.map(({ label, value, Icon }) => (
+                <div key={label} className="glass-card-soft flex items-center gap-3 p-4 shadow-none">
+                  <Icon className="h-5 w-5 text-[#f05f98]" aria-hidden="true" />
+                  <div>
+                    <p className="text-xs font-black uppercase text-[#a86b81]">{label}</p>
+                    <p className="font-black text-[#321725]">{value}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </aside>
+
+          <div className="glass-card p-6 sm:p-8">
+            <div className="grid gap-5 text-base leading-8 text-[#765d67]">
+              <p>
+                I recently completed a Bachelor of Software Engineering at Swinburne University and I am now studying a
+                Master of Artificial Intelligence at Macquarie University.
+              </p>
+              <p>
+                My internship experience includes frontend delivery at Navaro Product and Cloak Solutions: building Next.js
+                screens, React features, Figma-based components, REST API integrations, Keycloak authentication, and ML API
+                experiments.
+              </p>
+              <p>
+                My best work sits at the intersection of design and engineering: turning requirements into refined interfaces
+                that are easy to scan, easy to maintain, and comfortable on every screen size.
+              </p>
+            </div>
+
+            <div className="mt-7 flex flex-wrap gap-2">
+              {stack.map((item) => (
+                <span key={item} className="tag">
+                  {item}
+                </span>
+              ))}
+            </div>
+
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              {strengths.map((item) => (
+                <div key={item} className="glass-card-soft hover-lift flex items-start gap-3 p-4 shadow-none">
+                  <CheckCircle2 className="mt-1 h-4 w-4 shrink-0 text-[#f05f98]" aria-hidden="true" />
+                  <p className="text-sm font-semibold leading-6 text-[#6f4558]">{item}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-7 rounded-[24px] bg-gradient-to-r from-[#ff7ab6]/18 via-white/34 to-[#ffb35c]/22 p-5">
+              <div className="flex items-center gap-3">
+                <Sparkles className="h-5 w-5 text-[#d94f83]" aria-hidden="true" />
+                <p className="font-black text-[#321725]">Current focus</p>
+              </div>
+              <p className="mt-2 text-sm leading-7 text-[#765d67]">
+                Strengthening AI fundamentals while continuing to build polished React and Next.js user experiences.
+              </p>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
